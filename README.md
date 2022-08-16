@@ -1,6 +1,8 @@
 # React-shop-cloudfront
 
-CloudFront URL: djubq1e7163cb.cloudfront.net
+
+S3 (access denied): http://store-app-natallia-adziyanava.s3-website.eu-central-1.amazonaws.com/
+CloudFront URL: http://djubq1e7163cb.cloudfront.net
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
 
