@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            Marketplace!
+            Backpack Store!
           </Link>
         </Typography>
 
