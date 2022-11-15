@@ -54,9 +54,9 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       setAuthError("");
       setFile(undefined);
     } catch (err: any) {
-      console.log("Authorization error");
-      const message = err.response?.data?.message;
-      setAuthError(`Authorization error: ${message}`);
+      console.log("Authorization error: ", err.response.status);
+      const message = `Authorization error: ${err.response.data.message}`;
+      setAuthError(message);
     }
   };
   return (
@@ -64,7 +64,7 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
-      {authError && <div>Authorization error: {}</div>}
+      {authError && <div>{authError}</div>}
       {!file ? (
         <input type="file" onChange={onFileChange} />
       ) : (
