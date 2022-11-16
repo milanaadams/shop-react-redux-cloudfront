@@ -61,10 +61,10 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
   };
   return (
     <Box>
+      {authError && <div>{authError}</div>}
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
-      {authError && <div>{authError}</div>}
       {!file ? (
         <input type="file" onChange={onFileChange} />
       ) : (
