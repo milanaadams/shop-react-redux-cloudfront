@@ -52,7 +52,7 @@ export const availableProducts: AvailableProduct[] = products.map(
   (product, index) => ({ ...product, count: index + 1 })
 );
 
-export const cart: CartItem[] = [
+export const cart = [
   {
     product: {
       description: "Short Product Description1",

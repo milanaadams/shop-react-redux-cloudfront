@@ -34,7 +34,7 @@ export const handlers = [
     );
   }),
   rest.get(`${API_PATHS.cart}/profile/cart`, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.delay(), ctx.json<CartItem[]>(cart));
+    return res(ctx.status(200), ctx.delay(), ctx.json(cart));
   }),
   rest.put(`${API_PATHS.cart}/profile/cart`, (req, res, ctx) => {
     return res(ctx.status(200));
