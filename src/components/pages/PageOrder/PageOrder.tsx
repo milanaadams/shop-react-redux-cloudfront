@@ -55,7 +55,7 @@ export default function PageOrder() {
   ] = results;
   const { mutateAsync: updateOrderStatus } = useUpdateOrderStatus();
   const invalidateOrder = useInvalidateOrder();
-  const cartItems: CartItem[] = React.useMemo(() => {
+  const cartItems = React.useMemo(() => {
     if (order && products) {
       return order.items.map((item: OrderItem) => {
         const product = products.find((p) => p.id === item.productId);
@@ -79,7 +79,7 @@ export default function PageOrder() {
       <Typography component="h1" variant="h4" align="center">
         Manage order
       </Typography>
-      <ReviewOrder address={order.address} items={cartItems} />
+      {/* <ReviewOrder address={order.address} items={cartItems} /> */}
       <Typography variant="h6">Status:</Typography>
       <Typography variant="h6" color="primary">
         {lastStatusItem?.status.toUpperCase()}
